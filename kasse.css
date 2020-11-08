@@ -1,0 +1,412 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  background-color: white;
+}
+
+header {
+  border: none;
+}
+
+header img {
+  width: 100%;
+  display: block;
+}
+
+main {
+  min-height: 48vh;
+}
+
+nav {
+  height: 6.4vh;
+  background-color: #f88e0d;
+  position: sticky;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+#nav {
+  box-sizing: border-box;
+  display: grid;
+  height: 6.4vh;
+  overflow: hidden;
+  background-color: #f88e0d;
+  color: white;
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "home about shop kontakt spacer warenkorb";
+  z-index: 0;
+}
+
+#hamburger {
+  display: none;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+#home {
+  grid-area: home;
+}
+
+#about {
+  grid-area: about;
+}
+
+#shop {
+  grid-area: shop;
+}
+
+#kontakt {
+  grid-area: kontakt;
+}
+
+#spacer {
+  grid-area: spacer;
+}
+
+.warenkorb {
+  grid-area: warenkorb;
+  box-sizing: border-box;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f88e0d;
+  color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.warenkorb:hover {
+  background-color: rgb(126, 22, 22);
+}
+
+.warenkorb img {
+  box-sizing: border-box;
+  vertical-align: baseline;
+  height: 80%;
+  margin-left: 5%;
+}
+
+#nav a {
+  box-sizing: border-box;
+  float: left;
+  display: flex;
+  text-align: center;
+  text-decoration: none;
+  font-size: 17px;
+  color: white;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav a:hover {
+  background-color: rgb(126, 22, 22);
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  line-height: 2;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #f88e0d;
+  height: 10vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "impressum footer-spacer-l datenschutz footer-spacer-r agb";
+}
+
+footer a {
+  box-sizing: border-box;
+  text-decoration: none;
+  color: white;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#impressum {
+  grid-area: impressum;
+}
+
+#footer-spacer-l {
+  grid-area: footer-spacer-l;
+}
+
+#datenschutz {
+  grid-area: datenschutz;
+}
+
+#footer-spacer-r {
+  grid-area: footer-spacer-r;
+}
+
+#agb {
+  grid-area: agb;
+}
+
+@media only screen and (max-width: 1079px) {
+  #nav {
+    display: grid;
+  }
+
+  #hamburger {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 719px) {
+  .line {
+    width: 35px;
+    height: 6px;
+    background-color: white;
+    margin: 6px;
+    border-radius: 10px;
+  }
+
+  #hamburger {
+    width: fit-content;
+    height: inherit;
+    position: relative;
+    display: block;
+    background-color: #942222;
+    border-radius: 0 10px 10px 0;
+  }
+
+  .navBuCoIn {
+    left: 50% !important;
+  }
+
+  .navNavbarIn {
+    display: grid !important;
+  }
+
+  #nav {
+    height: 80vh;
+    width: 50%;
+    display: none;
+    background-color: #942222;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "home"
+      "about"
+      "shop"
+      "kontakt";
+  }
+
+  #nav a {
+    height: 100%;
+    width: 100%;
+  }
+
+  #nav #spacer {
+    display: none;
+  }
+
+  .warenkorb {
+    display: none;
+  }
+}
+
+    /*<!-------kontakt------>*/
+.kontakt_Adresse{
+}
+.kontakt_Adresse p{
+	font-size: 0.875em;
+	color: #6a6a6a;
+	line-height: 1.8em;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.kontakt_Adresse p span{
+	text-decoration:underline;
+	color:#454545;
+	cursor:pointer;
+}
+.wrap{
+		width:95%;
+	}
+	.span_2_of_3 {
+		width:94%;
+		padding:3%; 
+	}
+	.col{ 
+		margin: 1% 0 1% 0%;
+	}
+	.span_1_of_3 {
+		width:94%;
+		padding:3%; 
+	}
+   
+   
+
+.section {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.group:after {
+    content:"";
+    display:table;
+}
+.group:after {
+    clear:both;
+}
+.group {
+    zoom:1;
+}
+.col{
+	display: block;
+	float:left;
+	margin: 1% 0 1% 1.6%;
+}
+.col:first-child{
+	margin-left:0;
+}
+.span_1_of_3 {
+	width: 29.2%;
+	padding:1.5%; 
+}
+	
+.span_2_of_3 {
+	width: 63.1%;
+	padding:1.5%; 
+}
+
+.span_1_of_3  h3 {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 2em;
+	margin: 0;
+	text-transform: uppercase;
+	color: orange;
+}
+.span_2_of_3  h3 {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	line-height: 2em;
+	margin: 0;
+	text-transform: uppercase;
+	color: orange;
+}
+.contact-form{
+	position:relative;
+	padding-bottom:30px;
+	
+}
+.contact-form div{
+	padding:5px 0;
+	
+}
+.contact-form span{
+	display:block;
+	font-size:1em;
+	color: #454545;
+	padding-bottom:5px;
+	font-family: 'PT Sans Narrow', sans-serif;
+}
+.contact-form input[type="text"],.contact-form textarea{
+		    padding:8px;
+			display:block;
+			width:50%;
+			border: none;
+			outline:none;
+			color:#464646;
+			font-size:0.8125em;
+			font-family:Arial, Helvetica, sans-serif;
+			border: 1px solid rgba(192, 192, 192, 0.41);
+			-webkit-appearance:none;
+}
+
+.contact-form input[type="submit"]{           /*bestellen*/
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 20px;
+	color: black;
+	border-radius: 22px;
+	background-color: orange;	
+}
+
+
+.mm {                                         /* Google Maps*/
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 80px;
+ 
+}
+
+.box{
+        border-radius: 22px;
+        border: none;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+		
+}
+
+
+	
+	
+	 /*<!-------kasse------>*/
+	 
+	 
+.kasse{
+      		
+		position: sticky;
+		top: 0;
+		left: 170px ; 
+		width: 75%;
+		bottom: 90px ;
+		height: fit-content;
+		font-size: 16px;
+		background-color: #d8d8d8;
+		border-radius: 22px;
+		border: solid thin #666666;
+		box-sizing: border-box;
+		transform-origin: top;
+		      
+}
+    
+.box2{
+
+		border-radius: 22px;
+        border: none;
+        color: white;
+        font-size: 16px;
+		
+}	
+		
+	 
+	 
+	 
+	 
+	  /*<!-------kasse------>*/
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

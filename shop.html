@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="shop.css" />
+    <script src="shop.js"></script>
+    <title>LuFaSa online</title>
+  </head>
+  <body>
+    <header>
+      <img src="./Design/tennis_banner.jpg" />
+    </header>
+    <main class="container">
+      <nav id="navbar">
+        <button id="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+
+        <div id="nav">
+          <a href="index.html" id="home">Home</a>
+          <a href="ueberUns.html" id="about">Über uns</a>
+          <a href="shop.html" id="shop">Shop</a>
+          <a href="#" id="kontakt">Kontakt</a>
+          <div id="spacer"></div>
+          <button class="warenkorb">
+            <a href="warenkorb.html">
+              <span id="total">Total: 150,99€</span>
+              <img src="./Design/warenkorb.png" />
+            </a>
+          </button>
+        </div>
+      </nav>
+      <h1>Shop</h1>
+      <div id="adjustments">
+        <div class="adjustment" id="searchbar">
+          <input
+            type="search"
+            id="search"
+            onfocus="searchFocus()"
+            onblur="searchBlur()"
+            placeholder="Suchen Sie etwas bestimmtes..."
+          />
+          <button id="btn_search">Suchen</button>
+        </div>
+        <div class="adjustment" id="filter-container">
+          <div id="filter">
+            <div id="btn_filter" onclick="filterDropDown()">
+              <img id="filter-icon" src="./Design/filter_color.png" />
+              <div id="btn-filter-text">Filter</div>
+              <img
+                id="filter-dropdown-arrow"
+                src="./Design/dropDown_down.png"
+              />
+            </div>
+            <div class="content" id="filter-content">
+              <div id="preis">Preis:</div>
+              <div id="preis-content">
+                <input type="number" id="preis-min" placeholder="min. €" />
+                -
+                <input type="number" id="preis-max" placeholder="max. €" />
+              </div>
+
+              <div id="bewertung">Bewertung:</div>
+              <div id="bewertung-content" onmouseout="showStars(0)">
+                <div id="stars">
+                  <div id="stars-grey">
+                    <span class="star">
+                      <img src="./Design/star_grey.png" />
+                    </span>
+                    <span class="star">
+                      <img src="./Design/star_grey.png" />
+                    </span>
+                    <span class="star">
+                      <img src="./Design/star_grey.png" />
+                    </span>
+                    <span class="star">
+                      <img src="./Design/star_grey.png" />
+                    </span>
+                    <span class="star">
+                      <img src="./Design/star_grey.png" />
+                    </span>
+                  </div>
+                  <div id="stars-gold">
+                    <span
+                      class="star gold"
+                      onclick="starClicked(1)"
+                      onmouseover="showStars(1)"
+                    >
+                      <img class="goldStar" src="./Design/star_gold.png" />
+                    </span>
+                    <span
+                      class="star gold"
+                      onclick="starClicked(2)"
+                      onmouseover="showStars(2)"
+                    >
+                      <img class="goldStar" src="./Design/star_gold.png" />
+                    </span>
+                    <span
+                      class="star gold"
+                      onclick="starClicked(3)"
+                      onmouseover="showStars(3)"
+                    >
+                      <img class="goldStar" src="./Design/star_gold.png" />
+                    </span>
+                    <span
+                      class="star gold"
+                      onclick="starClicked(4)"
+                      onmouseover="showStars(4)"
+                    >
+                      <img class="goldStar" src="./Design/star_gold.png" />
+                    </span>
+                    <span
+                      class="star gold"
+                      onclick="starClicked(5)"
+                      onmouseover="showStars(5)"
+                    >
+                      <img class="goldStar" src="./Design/star_gold.png" />
+                    </span>
+                  </div>
+                </div>
+                <button id="btn-bewertung-loeschen" onclick="starClicked(0)">
+                  Löschen
+                </button>
+              </div>
+
+              <div id="marken">Marken:</div>
+              <ul id="marken-content">
+                <li class="item" onclick="markeChecked(0)">
+                  <span class="checkmark checked"></span>
+                  <span>Alle</span>
+                </li>
+
+                <li class="item" onclick="markeChecked(1)">
+                  <span class="checkmark"></span>
+                  <span>Marke 1</span>
+                </li>
+
+                <li class="item" onclick="markeChecked(2)">
+                  <span class="checkmark"></span>
+                  <span>Marke 2</span>
+                </li>
+
+                <li class="item" onclick="markeChecked(3)">
+                  <span class="checkmark"></span>
+                  <span>Marke 3</span>
+                </li>
+
+                <li class="item" onclick="markeChecked(4)">
+                  <span class="checkmark"></span>
+                  <span>Marke 4</span>
+                </li>
+
+                <li class="item" onclick="markeChecked(5)">
+                  <span class="checkmark"></span>
+                  <span>Marke 5</span>
+                </li>
+              </ul>
+              <div id="filter-anwenden">
+                <button id="btn-filter-anwenden" onclick="filterAnwenden()">
+                  Anwenden
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="spacer" id="spacer_f"></div>
+
+        <div class="adjustment" id="kategorie-container">
+          <div id="kategorie">
+            <div id="btn_kategorie" onclick="kategorieDropDown()">
+              <span id="btn-kategorie-label">Kategorie</span>
+              <img
+                id="kategorie-dropdown-arrow"
+                src="./Design/dropDown_down.png"
+              />
+            </div>
+            <div id="kategorie-content" class="content">
+              <ul>
+                <li class="kategorien" onclick="chooseCategory(0)">
+                  Alle Kategorien
+                </li>
+                <li class="kategorien" onclick="chooseCategory(1)">
+                  Bekleidung
+                </li>
+                <li class="kategorien" onclick="chooseCategory(2)">
+                  Supplements
+                </li>
+                <li class="kategorien" onclick="chooseCategory(3)">
+                  Bälle & Zubehör
+                </li>
+                <li class="kategorien" onclick="chooseCategory(4)">
+                  Fitness Geräte
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="spacer" id="spacer_b"></div>
+
+        <div class="adjustment" id="sortieren-container">
+          <div id="sortieren">
+            <div id="btn_sortieren" onclick="sortierenDropDown()">
+              <span id="btn-sortieren-label">Sortieren</span>
+              <img
+                id="sortieren-dropdown-arrow"
+                src="./Design/dropDown_down.png"
+              />
+            </div>
+            <div class="content" id="sortieren-content">
+              <ul>
+                <li class="sort-item" onclick="sortChecked(0)">
+                  <span class="sort-checkmark"></span>
+                  <span class="sort-item-label">Preis aufsteigend</span>
+                </li>
+                <li class="sort-item" onclick="sortChecked(1)">
+                  <span class="sort-checkmark"></span>
+                  <span class="sort-item-label">Preis absteigend</span>
+                </li>
+                <li class="sort-item" onclick="sortChecked(2)">
+                  <span class="sort-checkmark"></span>
+                  <span class="sort-item-label">Bewertung aufsteigend</span>
+                </li>
+                <li class="sort-item" onclick="sortChecked(3)">
+                  <span class="sort-checkmark"></span>
+                  <span class="sort-item-label">Bewertung absteigend</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="content-container">
+        <div id="artikel-liste">
+          <div class="artikel-liste-zeile">
+            <div class="artikel-liste-artikel">
+              <div class="artikel-bild-container">
+                <img
+                  class="artikel-bild"
+                  src="./Design/Artikel/Whey_Pulver.jpg"
+                />
+              </div>
+              <p class="artikel-name">ESN DESIGNER WHEY PROTEIN 2000g</p>
+              <p class="artikel-preis">48,97€</p>
+              <div class="artikel-bewertung">
+                <div class="artikel-sterne">
+                  <div class="artikel-sterne-grau">
+                    <img class="greyStar" src="./Design/star_grey.png" />
+                    <img class="greyStar" src="./Design/star_grey.png" />
+                    <img class="greyStar" src="./Design/star_grey.png" />
+                    <img class="greyStar" src="./Design/star_grey.png" />
+                    <img class="greyStar" src="./Design/star_grey.png" />
+                  </div>
+                  <div class="artikel-sterne-gold">
+                    <img class="goldStar" src="./Design/star_gold.png" />
+                    <img class="goldStar" src="./Design/star_gold.png" />
+                    <img class="goldStar" src="./Design/star_gold.png" />
+                    <img class="goldStar" src="./Design/star_gold.png" />
+                    <img class="goldStar" src="./Design/star_gold.png" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+          </div>
+          <div class="artikel-liste-zeile">
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+          </div>
+          <div class="artikel-liste-zeile">
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+          </div>
+          <div class="artikel-liste-zeile">
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+          </div>
+          <div class="artikel-liste-zeile">
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+            <div class="artikel-liste-artikel"></div>
+          </div>
+        </div>
+        <div class="artikel-liste-spacer"></div>
+        <div class="seitenwahl">
+          <img src="./Design/dropDown_left.png" onclick="pageLeft()" />
+          Seite 1 von 4
+          <img src="./Design/dropDown_right.png" onclick="pageRight()" />
+        </div>
+        <div class="artikel-liste-spacer"></div>
+      </div>
+    </main>
+    <footer>
+      <a id="impressum" href="#">Impressum</a>
+      <a id="datenschutz" href="#">Datenschutz</a>
+      <a id="agb" href="#">AGB</a>
+    </footer>
+  </body>
+</html>

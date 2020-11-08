@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="kasse.css" />
+    <script src="kasse.js"></script>
+    <title>LuFaSa online</title>
+  </head>
+  <body>
+    <header>
+      <img src="./Design/tennis_banner.jpg" />
+    </header>
+    <main class="container">
+      <nav id="navbar">
+        <button id="hamburger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </button>
+
+        <div id="nav">
+          <a href="index.html" id="home">Home</a>
+          <a href="ueberUns.html" id="about">Über uns</a>
+          <a href="shop.html" id="shop">Shop</a>
+          <a href="kontakt.html" id="kontakt">Kontakt</a>
+          <div id="spacer"></div>
+          <button class="warenkorb">
+            <span id="total">Total: 150,99€</span>
+            <img src="./Design/warenkorb.png" />
+          </button>
+        </div>
+      </nav>
+
+      <div id="content-container"></div>
+	  
+	  <!-------start-kasse------>
+	  <h1 style="color:orange;  text-align: center;">Kasse</h1>
+	 <div class="kasse">
+	  <div class="contact-form">
+		
+			<form method="post" action="kasse.html">					
+				
+				<div>			
+					<span><label>Anrede</label></span>
+					<span>
+					<input name="gender" type="radio" value="Herr" id="Herr" >Herr
+					<input name="gender" type="radio"  value="Frau" id="Frau" >Frau
+					</span>
+				</div>
+				
+				<div>
+					<span><label>Vor- und Nachname</label></span>
+					<span><input name="Vor- und Nachname" type="text" id="Name" class="box2" required></span>
+				</div>
+
+			  <div>
+					<span><label>Straße & Hausnummer</label></span>
+					<span><input name="Adresse" type="text" id="Adresse" class="box2" required></span>
+				</div>
+				
+				<div>
+					<span><label>PLZ & Ort</label></span>
+					<span><input name="PLZ und Stadt" type="text" id="PLZ und Stadt" class="box2" required></span>
+				</div>
+		
+				<div>
+					<span><label>Land</label></span>
+					<select name="Land" >
+					<option value="Deutschland">Deutschland</option>
+					<option value="Frankreich">Frankreich</option>
+					<option value="Dänemark">Dänemark</option>
+					<option value="Italien">Italien</option>
+					<option value="Österreich">	Österreich</option></select>
+				</div>
+				
+				
+				<div>
+	
+					<span><input name="AGBs" type="checkbox" value="AGBs" id="AGBs"required >Ja, ich habe die AGBs gelesen und akzeptiere diese.</span>
+
+				</div>
+				
+				<div>
+				    <span>Aktuell ist nur die Zahlung per Rechnung möglich.
+					      Alle nötige Zahlungsinfo erhalten Sie auf der Rechnung nach Abschluss des Kaufes.</span>
+				</div>
+				
+			   <div>
+					<span><input type="submit" value="Jetzt Bestellen" id="bestellen"  onclick=""></span>
+			  </div>
+		         
+		</div>
+	</div>
+
+	    <!-------start-kasse------>
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+    </main>
+    <footer>
+      <a id="impressum" href="#">Impressum</a>
+      <span id="footer-spacer-l" class="footer-spacer"></span>
+      <a id="datenschutz" href="#">Datenschutz</a>
+      <span id="footer-spacer-r" class="footer-spacer"></span>
+      <a id="agb" href="#">AGB</a>
+    </footer>
+  </body>
+</html>
